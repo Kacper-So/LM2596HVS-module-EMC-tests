@@ -74,10 +74,30 @@ In the differential-mode measurements, the background noise is significantly low
 </p>
 <p align="center"><b>Figure 6:</b> Common-mode conducted emissions of the DUT</p>
 
+The common-mode conducted emissions show considerable noise across the entire frequency range. Background noise is also clearly visible in the measurement.
+
 <p align="center">
 <img src="graphs/Conducted_DM.jpg" alt="Differential mode emissions" width="500" />
 </p>
 <p align="center"><b>Figure 7:</b> Differential-mode conducted emissions of the DUT</p>
+
+The differential-mode conducted emissions also exhibit significant noise throughout the entire spectrum. The spectrum contains multiple harmonics and interharmonics of the IC’s 150 kHz oscillator frequency. One noticeable dip in the emission levels was observed, likely caused by the cable supplying power to the DUT. In earlier tests, when a longer cable was used, additional and deeper notches appeared in the spectrum—suggesting cable resonance effects or impedance mismatches influencing emission behavior.
+
+## IC Oscillator Frequency
+
+<p align="center">
+<img src="graphs/Conducted_DC_MainFrq.jpg" alt="Oscillator fundamental frequency" width="500" />
+</p>
+<p align="center"><b>Figure 8:</b> Measurement of the IC’s main oscillator frequency</p>
+
+A peak was observed at 162 kHz, which is likely caused by the IC's main switching frequency. While this does not exactly match the nominal 150 kHz, the datasheet specifies 150 kHz as a typical value, with the actual oscillator frequency ranging from 133 kHz to 168 kHz.
+
+<p align="center">
+<img src="graphs/Conducted_DM_Harmonics.jpg" alt="Oscillator harmonics" width="500" />
+</p>
+<p align="center"><b>Figure 9:</b> Harmonics of the oscillator frequency</p>
+
+Harmonics of the 162 kHz switching frequency were observed across a wider frequency range.
 
 # Radiated Emissions
 
@@ -86,4 +106,22 @@ In the differential-mode measurements, the background noise is significantly low
 <p align="center">
 <img src="graphs/Radiated_background.jpg" alt="Radiated background noise" width="500" />
 </p>
-<p align="center"><b>Figure 8:</b> Background noise in radiated emissions measurements</p>
+<p align="center"><b>Figure 10:</b> Background noise in radiated emissions measurements</p>
+
+Significant background noise was observed during the measurement of the signal inside the empty TEM cell. Open TEM cells naturally pick up ambient radio signals from the environment. Noise at certain frequencies was much more prominent than at others. The following peaks were identified:
+
+- Markers 2 to 3 – FM radio signals (88 MHz to 108 MHz)
+- Marker 1 – TETRA communication around 390 MHz (used in Poland by public services such as the police)
+- Markers 4 to 7 – Other sources, such as communication systems, TV broadcasts, and local mobile operators
+
+This elevated background noise is likely due to poor electrical connection between parts of the TEM cell shielding.
+
+## Radiated Emissions Measurement
+
+<p align="center">
+<img src="graphs/Radiated.jpg" alt="Radiated emissions" width="500" />
+</p>
+<p align="center"><b>Figure 11:</b> Radiated emissions of the DUT</p>
+
+Some increase in noise levels was observed in the lower frequency range. However, due to the high background noise, it is difficult to clearly distinguish emissions originating from the DUT.
+

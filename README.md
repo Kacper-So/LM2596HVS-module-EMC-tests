@@ -15,8 +15,8 @@ The LM2596HV is a step-down (buck) voltage regulator with a typical oscillator f
 
 The tests were carried out using amateur and DIY equipment, including:
 
-- DIY TEM cell based on Petteri Aimonen's design: [GitHub link](https://github.com/PetteriAimonen/tem-cell)
-- DIY LISN module also based on Petteri Aimonen's design
+- DIY TEM (transverse electromagnetic) cell based on Petteri Aimonen's design: [GitHub link](https://github.com/PetteriAimonen/tem-cell)
+- DIY LISN (Line Impedance Stabilization Network) module also based on Petteri Aimonen's design
 - TinySA Ultra spectrum analyzer
 - TPS3010 bench power supply
 
